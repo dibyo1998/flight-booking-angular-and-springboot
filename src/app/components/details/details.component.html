@@ -1,0 +1,51 @@
+<mat-form-field class="search">
+<input matInput type="text"  placeholder="Search by name, source etc." [(ngModel)]="fsearch" (input)="search()" >
+</mat-form-field>
+<br>
+<br>
+<table  class="table1" border="1px">
+	<thead>
+	<tr>
+		<th>Flight Id</th>
+		<th> Name</th>
+		<th>Flight Source</th>
+		<th>Flight Destination</th>
+		<th>Flight Fare</th>
+		<th>Flight Availability</th>
+		<th>TotalSeats</th>
+		<th>Booked Seats</th>
+		<th>Delete</th>
+		<th>Edit</th>
+ 	</tr>
+	</thead>
+	<tbody>
+	<tr *ngFor="let i of flist">
+		<td>{{i.flightId}}</td>
+		<td>{{i.flightName}}</td>
+		<td>{{i.flightSource}}</td>
+		<td>{{i.flightDestination}}</td>
+		<td>{{i.flightFare}}</td>
+		<td>{{i.flightAvailability}}</td>
+		<td>{{i.flightTotalSeats}}</td>
+		<td>{{i.flightBookedSeats}}</td>
+		<td><button mat-raised-button color="warn" (click)="deleteData(i.flightId)">
+			Delete
+		</button></td>
+		<td><button mat-raised-button color="primary" (click)="editData(i.flightId)">
+			Edit
+		</button></td>
+	</tr> 
+	<!-- <tr>
+		<td>1</td>
+		<td>indofi</td>
+		<td>s</td>
+		<td>d</td>
+		<td>1</td>
+		<td>f</td>
+		<td>2</td>
+		<td>1</td>
+		
+	</tr> -->
+	</tbody>
+</table>	
+  

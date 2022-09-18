@@ -1,0 +1,82 @@
+<div>
+	<h1>
+		{{message}}
+	</h1>
+</div>
+<div align="center">
+<form class="tp-form" #addnewFlight="ngForm" (ngSubmit)="sendData(addnewFlight.value)">
+	<div>
+			<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label >Flight Number</mat-label>
+				<input matInput type="number" required name="flightId"  ngModel></mat-form-field>
+	</div>
+<div>
+<mat-form-field class="tp-full-width" appearance="fill">
+	<mat-label>Flight Name</mat-label>
+<input matInput type="text" name="flightName" required ngModel>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field class="tp-full-width" appearance="fill">
+	
+		<mat-label for="title">Available seats</mat-label>
+		<input id="title" matInput type="number" required name="flightTotalSeats" class="form-control" ngModel>
+	
+	</mat-form-field>
+	</div>
+	<div>
+	<mat-form-field class="tp-full-width" appearance="fill">
+	
+		<mat-label for="title">Source airport</mat-label>
+		<input id="title" matInput type="text" required name="flightSource" class="form-control" ngModel>
+	
+	</mat-form-field></div>
+	<div><mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Destination airport</mat-label>
+		<input id="title" matInput type="text" required name="flightDestination" class="form-control" ngModel>
+	</mat-form-field></div>
+	<div>
+	<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Departure Time</mat-label>
+		<input id="title" matInput type="datetime-local" required name="flightDepartureDate" class="form-control" ngModel>
+	</mat-form-field></div>
+	<div><mat-form-field class="tp-full-width" appearance="fill">
+	
+		<mat-label for="title">Arrival Time</mat-label>
+		<input id="title" matInput required type="datetime-local" name="flightArrivalDate" class="form-control" ngModel>
+	
+	</mat-form-field></div>
+	 <div><mat-form-field class="tp-full-width" appearance="fill">
+	
+		<mat-label for="title">Flight Fare</mat-label>
+		<input id="title" matInput required type="number" name="flightFare" class="form-control" ngModel>
+	</mat-form-field></div>
+	<div><mat-form-field class="tp-full-width" appearance="fill">
+	
+		<mat-label for="title">Flight Availability</mat-label>
+		<mat-select id="title" required name="flightAvailability" ngModel>
+			<mat-option value="true">True</mat-option>
+			<mat-option value="false">False</mat-option>
+		</mat-select>
+	</mat-form-field></div>
+	<div> 
+<mat-form-field class="tp-full-width" appearance="fill">
+	<!-- <div class="form-group"> -->
+		<mat-label for="title">Booked seats</mat-label>
+		<input id="title" required  matInput type="number" name="flightBookedSeats" class="form-control" ngModel>
+	</mat-form-field></div>
+	<div>
+<mat-form-field class="tp-full-width" appearance="fill">
+	<!-- <div class="form-group"> -->
+		<mat-label for="title">Logo URL</mat-label>
+		<input id="title" required matInput type="text" name="flightLogoUrl" class="form-control" ngModel>
+	</mat-form-field></div>
+<div>
+	
+	<button mat-raised-button color="primary" class="but" type="submit">Add</button>
+	<br><br>
+	<mat-divider></mat-divider>
+	<br><br>
+</div>
+</form>
+</div>  

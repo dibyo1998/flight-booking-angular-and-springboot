@@ -1,0 +1,64 @@
+<h1>
+	{{message}}
+</h1>
+<div align="center">
+<form #edit="ngForm" (ngSubmit)="sendData(edit.value)">
+	<!-- <form> -->
+<div class="form-group">
+	<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Flight Number</mat-label>
+		<input matInput id="title" type="number" name="flightId" [value]="flightinfo.flightId" disabled class="form-control" ngModel>
+	</mat-form-field>
+	</div>
+	<div class="form-group">
+		<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Flight Name</mat-label>
+		<input matInput id="title" type="text" name="flightName" [value]="flightinfo.flightName"  disabled  class="form-control" ngModel>
+	</mat-form-field>
+	</div>
+	<div class="form-group">
+		<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Departure Time</mat-label>
+		<input matInput id="title" type="text" name="flightDepartureDate" [value]="flightinfo.flightDepartureDate"  class="form-control" ngModel>
+	</mat-form-field>
+	</div>
+	<div class="form-group">
+		<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Arrival Time</mat-label>
+		<input matInput id="title" type="text" name="flightArrivalDate" [value]="flightinfo.flightArrivalDate" class="form-control" ngModel>
+		</mat-form-field>
+	</div>
+	<div class="form-group">
+		<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Flight Fare</mat-label>
+		<input matInput id="title" type="number" name="flightFare" [value]="flightinfo.flightFare" class="form-control" ngModel>
+			</mat-form-field>
+	</div>
+	<div><mat-form-field class="tp-full-width" class="tp-full-width" appearance="fill">
+	<mat-label for="title">Flight Availability</mat-label>
+		<mat-select id="title" name="flightAvailability" ngModel>
+			<mat-option value="true">True</mat-option>
+			<mat-option value="false">False</mat-option>
+		</mat-select>
+	</mat-form-field></div>
+	<div class="form-group">
+		<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Available seats</mat-label>
+		<input matInput id="title" type="number" name="flightTotalSeats" [value]="flightinfo.flightTotalSeats"  disabled class="form-control" ngModel>
+			</mat-form-field>
+	</div>
+	<div class="form-group">
+		<mat-form-field class="tp-full-width" appearance="fill">
+		<mat-label for="title">Booked seats</mat-label>
+		<input matInput id="title" type="number" name="flightBookedSeats" [value]="flightinfo.flightBookedSeats" class="form-control" ngModel>
+			</mat-form-field>
+	</div>
+	
+	<div class="form-group">
+		<button mat-raised-button color="accent" class="but" type="submit">Update</button>
+		<br><br>
+	<mat-divider></mat-divider>
+	<br><br>
+	</div>
+</form>
+</div>
